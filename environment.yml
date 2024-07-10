@@ -16,8 +16,13 @@ dependencies:
   - notebook
   - numpy
   - pandas
+  - polars
+  - pyarrow
+  - seaborn
+  - scipy
   - scikit-learn
   - pip:
+    - group-lasso
     - python-dotenv
     - mkdocs
     - -e .

@@ -4,9 +4,29 @@ import typer
 from loguru import logger
 from tqdm import tqdm
 
-from wind_turbine_fault_detection_and_prediction.config import FIGURES_DIR, PROCESSED_DATA_DIR
+import numpy as np
+from sklearn.metrics import confusion_matrix, accuracy_score
+from matplotlib import pyplot as plt
+
+from wind_turbine_fault_detection.config import FIGURES_DIR, PROCESSED_DATA_DIR
 
 app = typer.Typer()
+
+def create_labels(classes, samples_per_class):
+    """
+    Generates labels for a given number of classes and samples per class.
+
+    Args:
+        classes (int): The number of classes.
+        samples_per_class (int): The number of samples per class.
+
+    Returns:
+        numpy.ndarray: An array of labels.
+    """
+    # Repeat the range of classes to match the number of samples per class
+    # and return the resulting array.
+    return np.repeat(np.arange(classes), samples_per_class)
+
 
 
 @app.command()

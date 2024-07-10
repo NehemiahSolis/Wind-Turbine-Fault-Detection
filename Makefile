@@ -2,7 +2,7 @@
 # GLOBALS                                                                       #
 #################################################################################
 
-PROJECT_NAME = Practicum
+PROJECT_NAME = wind_turbine_fault_detection
 PYTHON_VERSION = 3.10
 PYTHON_INTERPRETER = python
 
@@ -28,14 +28,14 @@ clean:
 ## Lint using flake8 and black (use `make format` to do formatting)
 .PHONY: lint
 lint:
-	flake8 wind_turbine_fault_detection_and_prediction
-	isort --check --diff --profile black wind_turbine_fault_detection_and_prediction
-	black --check --config pyproject.toml wind_turbine_fault_detection_and_prediction
+	flake8 wind_turbine_fault_detection
+	isort --check --diff --profile black wind_turbine_fault_detection
+	black --check --config pyproject.toml wind_turbine_fault_detection
 
 ## Format source code with black
 .PHONY: format
 format:
-	black --config pyproject.toml wind_turbine_fault_detection_and_prediction
+	black --config pyproject.toml wind_turbine_fault_detection
 
 
 
@@ -58,7 +58,7 @@ create_environment:
 ## Make Dataset
 .PHONY: data
 data: requirements
-	$(PYTHON_INTERPRETER) wind_turbine_fault_detection_and_prediction/data/make_dataset.py
+	$(PYTHON_INTERPRETER) wind_turbine_fault_detection/data/make_dataset.py
 
 
 #################################################################################
