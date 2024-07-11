@@ -39,7 +39,7 @@ To use machine learning to classify wind turbine data as faulty or not in order 
 │
 ├── setup.cfg          <- Configuration file for flake8
 │
-└── wind_turbine_fault_detection_and_prediction                <- Source code for use in this project.
+└── wind_turbine_fault_detection                <- Source code for use in this project.
     │
     ├── __init__.py    <- Makes wind_turbine_fault_detection_and_prediction a Python module
     │
